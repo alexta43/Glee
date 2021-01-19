@@ -5,7 +5,7 @@
 
 .header {
     padding: 48px 0;
-    color: $header;
+    color: $accent;
     &__inner {
         @extend %rubik-700;
         display: flex;
@@ -15,6 +15,8 @@
 }
 .logo {
     position: relative;
+    @extend %rubik-700;
+    color: $accent;
     font-size: 36px;
     padding-left: 64px;
     &::before {
@@ -36,11 +38,12 @@
 .user-nav {
     display: flex;
     align-items: center;
+    @extend %rubik-500;
     &__search {
         margin-right: 22px;
         padding: 15px;
-        background-color: #edf1f4; 
-        transition: all .2s;
+        background-color: #edf1f4;
+        transition: all 0.2s;
         border-radius: 50%;
     }
     &__heart,
@@ -49,11 +52,11 @@
         padding: 22px 40px 12px 30px;
         background-color: #fcd7b6;
         border-radius: 0 40px 40px 0;
-        transition: all .2s;
+        transition: all 0.2s;
     }
     &__heart:hover,
     &__cart:hover {
-        opacity: .7;
+        opacity: 0.7;
     }
     &__heart {
         transform: rotateY(180deg);
@@ -61,7 +64,7 @@
     }
     &__heart::after {
         position: absolute;
-        content: url('../images/menu-icons/heart-border.svg');
+        content: url("../images/menu-icons/heart-border.svg");
         width: 1px;
         height: 30px;
         left: 0;
@@ -87,16 +90,120 @@
     &__btn {
         margin-left: 22px;
         background-color: #8eb2c6;
-        opacity: .8;
+        opacity: 0.8;
         padding: 15px;
         border: none;
         border-radius: 50%;
         line-height: 10px;
         cursor: pointer;
-        transition: all .2s;
+        transition: all 0.2s;
     }
     &__btn:hover {
         opacity: 1;
     }
 }
+
+.footer-top {
+    display: flex;
+    padding-bottom: 75px;
+    align-items: baseline;
+    border-bottom: 1px solid #dae4e9;
+    &__item {
+        font-size: 14px;
+    }
+    &__con {
+        width: 200px;
+        margin-right: 100px;
+    }
+    &__nav {
+        width: 140px;
+        margin-right: 160px;
+    }
+    &__item-form {
+        max-width: 270px;
+    }
+    &__address,
+    &__phone,
+    &__email {
+        display: block;
+        margin-bottom: 10px;
+        line-height: 22px;
+    }
+    &__phone:hover,
+    &__email:hover {
+        text-decoration: underline;
+    }
+    &__logo {
+        display: block;
+        margin-bottom: 25px;
+    }
+    &__title {
+        @extend %dmsans-700;
+        color: #1f2044;
+        font-size: 16px;
+        line-height: 21px;
+        text-transform: uppercase;
+        margin-bottom: 22px;
+    }
+    &__list-item {
+        line-height: 24px;
+        margin-bottom: 10px;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__text {
+        line-height: 24px;
+        margin-bottom: 35px;
+    }
+    &__form {
+        display: flex;
+    }
+    &__form-input {
+        @extend %dmsans-400;
+        color: #1f2044;
+        max-width: 170px;
+        width: 100%;
+        padding: 12px 15px 15px;
+        border: none;
+        background-color: #fef7f0;
+        &::placeholder {
+            @extend %dmsans-500;
+            color: $accent;
+            font-size: 12px;
+        }
+    }
+    &__form-btn {
+        background-color: #a3bbc8;
+        border: none;
+        color: #fff;
+        padding: 12px 15px 15px;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+.footer-bottom {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        line-height: 32px;
+        padding: 25px 0;
+    }
+    &__nav-link {
+        padding: 0 12px;
+        text-transform: capitalize;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__nav-link + .footer-bottom__nav-link {
+        border-left: 1px solid #7b7b7b;
+    }
+}
+
 @import "media";
