@@ -164,34 +164,34 @@
                 <div class="filter-menu top-week__filter-menu">
                     <ul class="filter-menu__list">
                         <li class="filter-menu__item">
-                            <button class="filter-menu__btn filter-menu__btn--active">
+                            <button class="filter-menu__btn" data-filter="all">
                                 All
                             </button>
                         </li>
                         <li class="filter-menu__item">
-                            <button class="filter-menu__btn">
+                            <button class="filter-menu__btn" data-filter=".category-a">
                                 Furnitures
                             </button>
                         </li>
                         <li class="filter-menu__item">
-                            <button class="filter-menu__btn">
+                            <button class="filter-menu__btn" data-filter=".category-b">
                                 Chairs
                             </button>
                         </li>
                         <li class="filter-menu__item">
-                            <button class="filter-menu__btn">
+                            <button class="filter-menu__btn" data-filter=".category-c">
                                 Lighting
                             </button>
                         </li>
                         <li class="filter-menu__item">
-                            <button class="filter-menu__btn">
+                            <button class="filter-menu__btn" data-filter=".category-d">
                                 Decor
                             </button>
                         </li>
                     </ul>
                 </div>
                 <div class="top-week__inner market__inner">
-                    <div class="market__item">
+                    <div class="market__item mix category-a">
                         <img class="market__item-img" src="images/content/1photo.png" alt="content photo">
                         <div class="market__item-hover">
                             <div class="market__item-hover__inner">
@@ -222,7 +222,7 @@
                             $29.00
                         </span>
                     </div>
-                    <div class="market__item">
+                    <div class="market__item mix category-a">
                         <img class="market__item-img" src="images/content/2photo.png" alt="content photo">
                         <div class="market__item-hover">
                             <div class="market__item-hover__inner">
@@ -253,7 +253,7 @@
                             $29.00
                         </span>
                     </div>
-                    <div class="market__item">
+                    <div class="market__item mix category-b">
                         <img class="market__item-img" src="images/content/3photo.png" alt="content photo">
                         <div class="market__item-hover">
                             <div class="market__item-hover__inner">
@@ -284,7 +284,7 @@
                             $29.00
                         </span>
                     </div>
-                    <div class="market__item">
+                    <div class="market__item mix category-b">
                         <img class="market__item-img" src="images/content/4photo.png" alt="content photo">
                         <div class="market__item-hover">
                             <div class="market__item-hover__inner">
@@ -315,7 +315,7 @@
                             $29.00
                         </span>
                     </div>
-                    <div class="market__item">
+                    <div class="market__item mix category-c">
                         <img class="market__item-img" src="images/content/5photo.png" alt="content photo">
                         <div class="market__item-hover">
                             <div class="market__item-hover__inner">
@@ -346,7 +346,7 @@
                             $29.00
                         </span>
                     </div>
-                    <div class="market__item">
+                    <div class="market__item mix category-d">
                         <img class="market__item-img" src="images/content/6photo.png" alt="content photo">
                         <div class="market__item-hover">
                             <div class="market__item-hover__inner">
@@ -377,7 +377,7 @@
                             $29.00
                         </span>
                     </div>
-                    <div class="market__item">
+                    <div class="market__item mix category-d">
                         <img class="market__item-img" src="images/content/7photo.png" alt="content photo">
                         <div class="market__item-hover">
                             <div class="market__item-hover__inner">
@@ -408,7 +408,7 @@
                             $29.00
                         </span>
                     </div>
-                    <div class="market__item">
+                    <div class="market__item mix category-d">
                         <img class="market__item-img" src="images/content/8photo.png" alt="content photo">
                         <div class="market__item-hover">
                             <div class="market__item-hover__inner">
@@ -445,8 +445,8 @@
                 <div class="container">
                     <div class="top-week__mini-items">
                         <div class="top-week__mini-item">
-                            <img class="top-week__mini-img top-week__mini-lamp1" src="images/content/lamp1.png" alt="lamp photo">
                             <div class="top-week__mini-descr">
+                                <img class="top-week__mini-img" src="images/content/lamp1.png" alt="lamp photo">
                                 <h6 class="top-week__mini-title">
                                     Mirum Notare Tellus
                                 </h6>
@@ -456,14 +456,16 @@
                                 <a class="top-week__mini-link" href="#">
                                     View More
                                     <svg width="22" height="9" viewBox="0 0 22 9">
-                                        <path fill="#436372" fill-rule="evenodd" class="cls-1" d="M535.3,654.472h16.948l-0.1,2.857a0.292,0.292,0,0,0,0,.41l0.172,0.172a0.28,0.28,0,0,0,.2.086,0.285,0.285,0,0,0,.2-0.084l4.193-4.211A0.292,0.292,0,0,0,557,653.5a0.283,0.283,0,0,0-.084-0.2l-4.193-4.213a0.289,0.289,0,0,0-.407,0l-0.172.173a0.287,0.287,0,0,0-.084.2,0.278,0.278,0,0,0,.084.2l0.113,2.865H535.292a0.3,0.3,0,0,0-.292.295v1.37A0.292,0.292,0,0,0,535.3,654.472Z" transform="translate(-535 -649)"/>
-                                      </svg>
+                                        <path fill="#436372" fill-rule="evenodd" class="cls-1"
+                                            d="M535.3,654.472h16.948l-0.1,2.857a0.292,0.292,0,0,0,0,.41l0.172,0.172a0.28,0.28,0,0,0,.2.086,0.285,0.285,0,0,0,.2-0.084l4.193-4.211A0.292,0.292,0,0,0,557,653.5a0.283,0.283,0,0,0-.084-0.2l-4.193-4.213a0.289,0.289,0,0,0-.407,0l-0.172.173a0.287,0.287,0,0,0-.084.2,0.278,0.278,0,0,0,.084.2l0.113,2.865H535.292a0.3,0.3,0,0,0-.292.295v1.37A0.292,0.292,0,0,0,535.3,654.472Z"
+                                            transform="translate(-535 -649)" />
+                                    </svg>
                                 </a>
                             </div>
                         </div>
                         <div class="top-week__mini-item">
-                            <img class="top-week__mini-img top-week__mini-lamp2" src="images/content/lamp2.png" alt="lamp photo">
                             <div class="top-week__mini-descr">
+                                <img class="top-week__mini-img" src="images/content/lamp2.png" alt="lamp photo">
                                 <h6 class="top-week__mini-title">
                                     Males uada Tempor
                                     Euismod
@@ -474,8 +476,10 @@
                                 <a class="top-week__mini-link" href="#">
                                     View More
                                     <svg width="22" height="9" viewBox="0 0 22 9">
-                                        <path fill="#436372" fill-rule="evenodd" class="cls-1" d="M535.3,654.472h16.948l-0.1,2.857a0.292,0.292,0,0,0,0,.41l0.172,0.172a0.28,0.28,0,0,0,.2.086,0.285,0.285,0,0,0,.2-0.084l4.193-4.211A0.292,0.292,0,0,0,557,653.5a0.283,0.283,0,0,0-.084-0.2l-4.193-4.213a0.289,0.289,0,0,0-.407,0l-0.172.173a0.287,0.287,0,0,0-.084.2,0.278,0.278,0,0,0,.084.2l0.113,2.865H535.292a0.3,0.3,0,0,0-.292.295v1.37A0.292,0.292,0,0,0,535.3,654.472Z" transform="translate(-535 -649)"/>
-                                      </svg>
+                                        <path fill="#436372" fill-rule="evenodd" class="cls-1"
+                                            d="M535.3,654.472h16.948l-0.1,2.857a0.292,0.292,0,0,0,0,.41l0.172,0.172a0.28,0.28,0,0,0,.2.086,0.285,0.285,0,0,0,.2-0.084l4.193-4.211A0.292,0.292,0,0,0,557,653.5a0.283,0.283,0,0,0-.084-0.2l-4.193-4.213a0.289,0.289,0,0,0-.407,0l-0.172.173a0.287,0.287,0,0,0-.084.2,0.278,0.278,0,0,0,.084.2l0.113,2.865H535.292a0.3,0.3,0,0,0-.292.295v1.37A0.292,0.292,0,0,0,535.3,654.472Z"
+                                            transform="translate(-535 -649)" />
+                                    </svg>
                                 </a>
                             </div>
                         </div>
@@ -591,7 +595,7 @@
         </div>
     </footer>
 
-
+    <script src="../node_modules/mixitup/dist/mixitup.min.js"></script>
     <script src="js/main.min.js"></script>
 </body>
 

@@ -6,5 +6,5 @@ $(function() {
       fade: true
   })
 
-  $('.market__item-hover__link')
+  var mixer = mixitup('.top-week__inner');
 });

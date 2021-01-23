@@ -4,6 +4,10 @@
 @import "libs";
 @import "global";
 
+.mixitup-control-active {
+    color: $title;
+}
+
 .header {
     padding: 48px 0;
     color: $accent;
@@ -332,6 +336,7 @@
 }
 
 .top-week {
+    margin-bottom: 100px;
     &__title {
         display: flex;
         justify-content: center;
@@ -347,24 +352,22 @@
         justify-content: space-between;
     }
     &-item {
-        position: relative;
-        padding: 85px 140px 85px 392px;
+        padding: 85px 140px 85px 300px;
         background-color: #feefe2;
-    }
-    &-img {
-        position: absolute;
-        left: 140px;
-        top: -33%;
-    }
-    &-lamp2 {
-        top: -25%;
     }
     &-descr {
         position: relative;
-        width: 335px;
+        width: 430px;
+        min-height: 210px;
+        padding-left: 100px;
         font-size: 16px;
         line-height: 30px;
         color: $sectitle;
+    }
+    &-img {
+        position: absolute;
+        bottom: 0;
+        left: -35%;
     }
     &-title {
         @extend %dmsans-700;
@@ -382,6 +385,7 @@
         color: $accent;
         border-radius: 5px;
         transition: all .3s;
+        position: relative;
         svg {
             margin-left: 40px;
         }
@@ -393,8 +397,6 @@
         }
     }
 }
-
-  
     
 
 
