@@ -6,5 +6,16 @@ $(function() {
       fade: true
   })
 
-  var mixer = mixitup('.top-week__inner');
+  var containerEl1 = document.querySelector('[data-ref="mix1"]');
+  var containerEl2 = document.querySelector('[data-ref="mix2"]');
+  var mixer1 = mixitup(containerEl1, {
+    selectors: {
+      control: '.top-week__filter-btn'
+    }
+  });
+  var mixer2 = mixitup(containerEl2, {
+    selectors: {
+      control: '.new-design__filter-btn'
+    }
+  });
 });

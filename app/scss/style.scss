@@ -108,7 +108,6 @@
 .footer-top {
     display: flex;
     padding-bottom: 75px;
-    align-items: baseline;
     border-bottom: 1px solid #dae4e9;
     &__item {
         font-size: 14px;
@@ -138,6 +137,7 @@
     &__logo {
         display: block;
         margin-bottom: 25px;
+        margin-top: -12px;
     }
     &__title {
         @extend %dmsans-700;
@@ -396,10 +396,55 @@
     }
     &__link {
         align-items: center;
-        &:hover .video-section__svg circle{
-            fill: $sectitle;
+        circle {
             transition: all .3s;
         }
+        &:hover .video-section__svg circle{
+            fill: $sectitle;
+        }
+    }
+}
+
+.new-design {
+    margin-bottom: 120px;
+    display: flex;
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 35px 30px;
+    }
+    &__item {
+        position: relative;
+        height: 250px;
+        width: 370px;
+        background-color: #f8f8f8;
+        padding: 30px 0 0 35px;
+    }
+    &__link {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: $title;
+        opacity: 0;
+        transition: all .4s;
+        &:hover {
+            opacity: .1;
+        }
+    }
+    &__item-title {
+        @extend %dmsans-700;
+        font-size: 20px;
+        line-height: 26px;
+        max-width: 190px;
+        margin-bottom: 15px;
+        color: $title;
+        transition: all .5s;
+    }
+    &__item-subtitle {
+        @extend %dmsans-700;
+        color: #a3bbc8;
     }
 }
 
