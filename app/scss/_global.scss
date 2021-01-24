@@ -32,11 +32,15 @@ body {
     font-size: 36px;
     line-height: 42px;
     color: $title;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .filter-menu {
     display: flex;
     justify-content: center;
+    margin-bottom: 80px;
     &__list {
         display: flex;
     }
@@ -95,6 +99,7 @@ body {
             border-radius: 50%;
             line-height: 1px;
             transition: all .5s;
+            border: none;
             &:hover,
             &:hover .market__item-hover__svg path {
                 background-color: #a3bbc8;

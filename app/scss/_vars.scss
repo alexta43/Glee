@@ -39,3 +39,9 @@ $title: #191919;
     font-size: 15px;
     transition: all .3s;
 }
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
