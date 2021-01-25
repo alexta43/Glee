@@ -168,6 +168,7 @@
         width: 100%;
         padding: 12px 15px 15px;
         border: none;
+        outline-color: $accent;
         background-color: #fef7f0;
         &::placeholder {
             @extend %dmsans-500;
@@ -449,7 +450,11 @@
 }
 
 .news {
+    position: relative;
+    z-index: 6;
     margin-bottom: 100px;
+    transform: translateY(270px);
+    margin-top: -270px;
     &__top-box {
         display: flex;
         justify-content: space-between;
@@ -505,6 +510,7 @@
     }
     &__content-bottom {
         padding: 0 30px;
+        background-color: #fff;
     }
     &__content-news {
         position: relative;
@@ -539,16 +545,45 @@
     }
     &__content-info__data {
         margin-right: 40px;
+        text-align: center;
     }
     &__content-info__author {
+        display: flex;
         transition: all .3s;
         &:hover {
             color: #a3bbc8;
         }
     }
+    &__content-info__author-link {
+        padding-left: 2px;
+    }
 }
 
-
+.clients-slider {
+    background-color: #fef7f0;
+    margin-bottom: 75px;
+    &__inner {
+        height: 440px;
+        position: relative;
+    }
+    &__items {
+        position: absolute;
+        height: 250px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &__item {
+        display: flex !important;
+        align-items: center;
+        height: 90px;
+        width: 230px;
+        justify-content: center;
+    }
+}
 
 
 

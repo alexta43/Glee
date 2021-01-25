@@ -6,7 +6,13 @@ $(function() {
       fade: true,
       autoplay: true,
       autoplaySpeed: 2000
-  })
+  });
+  $('.clients-slider__items').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    arrows: false
+  });
 
   var containerEl1 = document.querySelector('[data-ref="mix1"]');
   var containerEl2 = document.querySelector('[data-ref="mix2"]');
