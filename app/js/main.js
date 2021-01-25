@@ -3,7 +3,9 @@ $(function() {
   $('.top-slider__inner').slick({
       dots: true,
       arrows: false,
-      fade: true
+      fade: true,
+      autoplay: true,
+      autoplaySpeed: 2000
   })
 
   var containerEl1 = document.querySelector('[data-ref="mix1"]');
