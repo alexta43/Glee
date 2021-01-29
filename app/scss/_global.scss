@@ -63,6 +63,7 @@ body {
 .breadcrumbs {
     &__list {
         display: flex;
+        justify-content: center;
     }
     &__item {
         padding-right: 20px;
