@@ -1,5 +1,30 @@
 $(function() {
 
+  $('.filter-category__label').on('click', function() {
+    $(this).toggleClass('filter-category__label--active')
+
+  });
+
+  $(".filter-price__input").ionRangeSlider({
+    type: "double",
+    prefix: '$',
+    onStart: function (data) {
+      $('.filter-price__from').text(data.from)
+      $('.filter-price__to').text(data.to)
+    },
+    onChange: function (data) {
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+    }
+ });
+
+ $('.star').rateYo({
+  starWidth: "17px",
+  normalFill: "#ccccce",
+  ratedFill: "#ffc35b",
+  readOnly: "true"
+ });
+
   $('.top-slider__inner').slick({
       dots: true,
       arrows: false,
@@ -26,4 +51,7 @@ $(function() {
       control: '.new-design__filter-btn'
     }
   });
+
+
+
 });
