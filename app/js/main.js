@@ -1,8 +1,13 @@
 $(function() {
 
   $('.filter-category__label').on('click', function() {
-    $(this).toggleClass('filter-category__label--active')
+    $(this).toggleClass('filter-category__label--active');
+    // break;
+  });
 
+  $('.filter-brand__label').on('click', function() {
+    $('.filter-brand__label').removeClass('filter-brand__label--active');
+    $(this).addClass('filter-brand__label--active');
   });
 
   $(".filter-price__input").ionRangeSlider({
