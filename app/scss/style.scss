@@ -920,6 +920,9 @@
 
 .shop {
     padding: 120px 0;
+    &__inner {
+        display: flex;
+    }
     &-clients__inner {
         height: 250px;
     }
@@ -927,7 +930,7 @@
 
 .filter {
     padding-right: 22px;
-    width: 300px;
+    width: 360px;
     &-title {
         font-size: 18px;
         line-height: 22px;
@@ -1026,9 +1029,10 @@
     width: 15px;
     height: 15px;
     background-color: $blue;
+    cursor: grab;
 }
 
-.irs--flat .irs-handle>i:first-child {
+.irs--flat .irs-handle > i:first-child {
     display: none;
 }
 
@@ -1092,7 +1096,7 @@
     &__info-titlelink {
         &:hover {
             text-decoration: underline;
-        } 
+        }
     }
     &__info-title {
         color: #333333;
@@ -1102,9 +1106,104 @@
     margin-left: -10px;
 }
 
+.shop-content {
+    width: 100%;
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 30px;
+        border-bottom: 2px solid #ececec;
+        align-items: center;
+        margin-bottom: 50px;
+        margin-top: -62px;
+    }
+    &__menu-viewtext {
+        color: $accent;
+        font-size: 18px;
+    }
+    &__menu-btn {
+        margin-left: 10px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        position: relative;
+        top: 2px;
+        &--active {
+            path {
+                fill: $accent;
+            }
+        }
+        &:hover {
+            path {
+                fill: $accent;
+            }
+        }
+    }
+}
 
+.select-style {
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        width: 10px;
+        height: 10px;
+        background-image: url("../images/icons/shop-icons/category-arrow.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: rotateZ(90deg);
+    }
+}
 
+.jq-selectbox__select {
+    height: 32px;
+    padding: 0 45px 0 10px;
+    border: none;
+    border-radius: none;
+    background: none;
+    box-shadow: none;
+    font: 14px/32px Arial, sans-serif;
+    color: #333;
+    text-shadow: none;
+    &:hover {
+        background: none;
+    }
+}
 
+.jq-selectbox__select-text {
+    color: $accent;
+}
+
+.jq-selectbox__trigger {
+    display: none;
+}
+
+.jq-selectbox li:hover,
+.jq-selectbox li.selected {
+    background-color: $accent;
+}
+
+.shop-content {
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 70px;
+    }
+    &__item {
+        margin-bottom: 40px;
+    }
+    &__pagination {
+        margin-left: -5px;
+    }
+}
+
+.pagination--list {
+    justify-content: left;
+}
 
 
 
