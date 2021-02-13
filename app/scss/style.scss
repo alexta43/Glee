@@ -240,6 +240,7 @@
         background-position: right 180px top 95px;
     }
     &__item {
+        position: relative;
         display: flex !important;
         height: 330px;
     }
@@ -963,6 +964,7 @@
         width: 100%;
         transition: all 0.2s;
         border-radius: 5px;
+        margin-bottom: 2px;
         cursor: pointer;
         &:hover {
             background-color: #edf1f4;
@@ -1046,6 +1048,7 @@
         border-radius: 5px;
         cursor: pointer;
         color: $title;
+        margin-bottom: 2px;
         &:hover,
         &:hover .filter-brand__num {
             background-color: #edf1f4;
@@ -1204,6 +1207,218 @@
 .pagination--list {
     justify-content: left;
 }
+
+.product {
+    padding: 120px 0;
+    &-clients__inner {
+        height: 250px;
+    }
+    &-inner {
+        display: flex;
+    }
+    &-slider {
+        display: flex;
+        width: 550px;
+        margin-right: 50px;
+    }
+}
+
+.product-slider__thumbs {
+    width: 140px;
+    margin-right: 25px;
+}
+
+.product-slider__thumb {
+    padding: 2px 10px;
+    height: 160px;
+    width: 100%;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #ececec;
+    cursor: pointer;
+}
+
+.product-slider__thumb-img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.product-slider__big {
+    height: 100%;
+}
+
+.product-slider__big-item {
+    padding: 68px 60px;
+    border: 1px solid #ececec;
+}
+
+.product-content {
+    width: 540px;
+    padding-top: 20px;
+    &__title {
+        color: $title;
+        font-size: 40px;
+        @extend %rubik-400;
+        margin-bottom: 20px;
+    }
+    &__star {
+        margin-bottom: 30px;
+    }
+    &__price {
+        font-size: 30px;
+        color: $title;
+        margin-bottom: 20px;
+    }
+    &__text {
+        color: $sectitle;
+        width: 540px;
+        line-height: 30px;
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    &__list {
+        color: $sectitle;
+        line-height: 30px;
+        margin-top: 50px;
+        font-size: 18px;
+    }
+}
+
+.jq-number {
+    padding: 0 0 0 0;
+}
+
+.jq-number__field {
+    width: 150px;
+    position: relative;
+    border: 1px solid $blue;
+    border-bottom-color: $blue;
+    border-radius: 0px;
+    box-shadow: none;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        background-color: $blue;
+    }
+    &::before {
+        left: 48px;
+    }
+    &::after {
+        right: 48px;
+    }
+    &:hover {
+        border-color: $blue;
+    }
+}
+
+.jq-number__field input {
+    width: 100%;
+    position: relative;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 16px;
+    @extend %rubik-400;
+    color: #333;
+    text-align: center;
+}
+
+.jq-number__spin {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    right: 0;
+    height: 14px;
+    border: none;
+    border-radius: 0px;
+    background: transparent;
+    box-shadow: none;
+    user-select: none;
+    text-shadow: none;
+    cursor: pointer;
+    &:hover {
+        background: transparent;
+    }
+    &:active {
+        box-shadow: none;
+        background: transparent;
+    }
+}
+
+.jq-number__spin.minus {
+    top: 22px;
+    left: 11px;
+    position: absolute;
+    &::after {
+        top: 5px;
+        border-top: none;
+        border-right: none;
+        border-bottom: none;
+        border-left: none;
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 1px;
+        background-color: #333;
+    }
+}
+
+.jq-number__spin.plus {
+    right: 9px;
+    top: 22px;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 9px;
+        height: 1px;
+        background-color: #333;
+        border-right: none;
+        border-bottom: none;
+        border-left: none;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 9px;
+        left: 15px;
+        background-color: #333;
+    }
+}
+
+.product-content__filter-btn {
+    color: #fff;
+    background-color: $blue;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 50px 15px 45px;
+    line-height: 25px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.market__item-buttons.product-content__filter-buttons {
+    display: inline-block;
+    position: relative;
+}
+
+.product-content-onclick-box {
+    position: relative;
+    top: 4px;
+    left: 20px;
+}
+
+
+
 
 
 

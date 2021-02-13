@@ -237,12 +237,6 @@ body {
                     opacity: 1;
                 }
             }
-            .market__item-btn--none {
-                display: none;
-            }
-            .market__item-btn--none + .market__item-buttons-onclick-box--on {
-                display: block;
-            }
         }
     }
     &__item-img {
@@ -304,26 +298,24 @@ body {
     &__item-btn--none {
         display: none !important;
     }
-    &__item-buttons-onclick-box {
-        display: none;
-    }
     &__item-btn-onclick {
         padding: 15px 14px;
         margin: 0 6px;
         background-color: #fff;
         border: none;
         transition: all .5s;
+        outline: none;
         cursor: pointer;
-        &:hover,
-        &:hover path {
-            background-color: $blue;
-            fill: #fff;
-        }
-        &--active,
-        &--active path {
-            background-color: $blue;
-            fill: #fff;
-        }
+    }
+    &__item-btn-onclick-cart--active,
+    &__item-btn-onclick-cart--active path {
+        background-color: $blue;
+        fill: #fff;
+    }
+    &__item-btn-onclick-heart--active,
+    &__item-btn-onclick-heart--active path {
+        background-color: $blue;
+        fill: #fff;
     }
 }
 

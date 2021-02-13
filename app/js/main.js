@@ -1,13 +1,25 @@
 $(function() {
 
-  $('.market__item-btn').on('click', function() {
-    $(this).addClass('market__item-btn--none');
-    $('.market__item-buttons-onclick-box').addClass('market__item-buttons-onclick-box--on');
-  });
+  $('.market__item-buttons-onclick-box').hide();
+  $('.market__item-btn').each(function(i){
+    $(this).on('click', function(e){ 
+        e.preventDefault();
+        $('.market__item-btn').eq(i).hide();
+        $('.market__item-buttons-onclick-box').eq(i).fadeIn();
+        $('.market__item-btn-onclick-cart').addClass('market__item-btn-onclick-cart--active');
+    });
+  })
 
-  $('.market__item-buttons-onclick-box, .market__item-buttons-onclick-box--on').on('click', function() {
-    $(this).removeClass('market__item-buttons-onclick-box--on');
-    $('.market__item-btn, .market__item-btn--none').removeClass('market__item-btn--none');
+  $('.market__item-btn-onclick-cart').each(function(i){
+    $(this).on('click', function(e){ 
+        e.preventDefault();
+        $('.market__item-buttons-onclick-box').eq(i).hide();
+        $('.market__item-btn').eq(i).fadeIn();
+    });
+  })
+  
+  $('.market__item-btn-onclick-heart').on('click', function() {
+    $(this).toggleClass('market__item-btn-onclick-heart--active');
   });
 
   $('.filter-category__label input').click(function(e) {
@@ -34,6 +46,7 @@ $(function() {
   });
 
   $('.select-style').styler();
+  $('.product-content__filter-input').styler();
 
   $(".filter-price__input").ionRangeSlider({
     type: "double",
@@ -46,14 +59,38 @@ $(function() {
       $('.filter-price__from').text(data.from);
       $('.filter-price__to').text(data.to);
     }
- });
+   });
 
- $('.star').rateYo({
-  starWidth: "17px",
-  normalFill: "#ccccce",
-  ratedFill: "#ffc35b",
-  readOnly: "true"
- });
+   $('.product-content__star').rateYo({
+    starWidth: "22px",
+    normalFill: "#d6d6d6",
+    ratedFill: "#ffcc00",
+    spacing: "10px",
+    readOnly: true
+   });
+
+   $('.star').rateYo({
+    starWidth: "17px",
+    normalFill: "#d6d6d6",
+    ratedFill: "#ffcc00",
+    readOnly: "true"
+   });
+  
+   $('.product-slider__big').slick({
+    draggable: false,
+    arrows: false,
+    // fade: true,
+    asNavFor: '.product-slider__thumbs'
+   });
+  
+   $('.product-slider__thumbs').slick({
+     focusOnSelect: true,
+     slidesToShow: 3,
+     slidesToScroll: 1,
+     vertical: true,
+     draggable: false,
+     asNavFor: '.product-slider__big'
+   });
 
   $('.top-slider__inner').slick({
       dots: true,
